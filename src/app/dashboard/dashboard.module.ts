@@ -16,8 +16,16 @@ import {MatCardModule} from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { RouterModule } from '@angular/router';
+import { Banner1Component } from './banner1/banner1.component';
+import { HeaderComponent } from './header/header.component';
+import { Banner2Component } from './banner2/banner2.component';
+import { Banner3Component } from './banner3/banner3.component';
+import { Banner4Component } from './banner4/banner4.component';
+import { Banner5Component } from './banner5/banner5.component';
+import { Banner6Component } from './banner6/banner6.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
-  declarations: [HomeComponent,],
+  declarations: [HomeComponent, Banner1Component, HeaderComponent, Banner2Component, Banner3Component, Banner4Component, Banner5Component, Banner6Component, FooterComponent,],
   imports: [
     CommonModule,
     MatInputModule,

@@ -1,0 +1,55 @@
+<div class="header">
+    <div class="header__text header__text-image_content">
+        <span>
+            <figure class="header__text-image_content--logo">
+                <img class="header__text-image_content--logo-img" src="../../../assets/newproject.jpg"
+                    alt="New Project image">
+            </figure>
+        </span>
+        <span class="header__text--logotext">Aesnik</span>
+    </div>
+    <div class="header__text header__text-align-center">
+        <div class="header__text--mcdiv">
+            <div></div>
+            <div class="header__text--mcdiv-1">I'M A Merchant</div>
+            <div class="header__text--mcdiv-2">I'M A Consumer</div>
+            <div></div>
+        </div>
+    </div>
+    <div class="header__text header__text-two-border">
+        <div class="header__text-login">
+            <div class="header__text-login-img">
+                <figure class="header__text-login-img--logo">
+                    <img class="header__text-login-img--logo-img" src="../../../assets/lock.jpg"
+                        alt="New Project image">
+                </figure>
+            </div>
+            <div class="header__text-login-text">Customer Login</div>
+        </div>
+    </div>
+    <div class="header__text header__text-border">
+        <div class="header__text-login">
+            <div class="header__text-login-img">
+                <figure class="header__text-login-img--logo">
+                    <img class="header__text-login-img--logo-img" src="../../../assets/users.jpg"
+                        alt="New Project image">
+                </figure>
+            </div>
+            <div class="header__text-login-text">Partner Login</div>
+        </div>
+    </div>
+    <div class="header__menu">
+        <input type="checkbox" name="" id="header__menu-checkbox1" class="header__menu-checkbox" (click)="displayMenu($event)">
+         <figure for="header__menu-checkbox1" class="header__menu-navigation__button header__menu-logo">
+                <img class="header__menu-logo-img" src="../../../assets/menu-icon.jpg" alt="" (click)="displayMenuOnImage()">
+            </figure>
+    </div>
+</div>
+<div class="header__menu-display__menu" id="display-menu-div">
+    <ul class="list-items">
+        <li class="list-items--li">I'm a merchant</li>
+        <li class="list-items--li">I'm a consumer</li>
+        <li class="list-items--li">Customer login</li>
+        <li class="list-items--li">Partnet Login</li>
+    </ul>
+</div>

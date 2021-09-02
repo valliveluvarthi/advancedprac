@@ -15,6 +15,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {DashboardModule} from './dashboard/dashboard.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { RouteConstants } from './routeconstants';
+import {APP_BASE_HREF} from '@angular/common';  
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { RouteConstants } from './routeconstants';
     MatSnackBarModule,
     RouterTestingModule,
   ],
-  providers: [RouteConstants],
+  providers: [RouteConstants,{provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
