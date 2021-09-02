@@ -3,6 +3,7 @@ $bp-large: 62.5em;   // 1000px
 $bp-medium: 56.25em; // 900px
 $bp-tablet : 43.75em; //700px
 $bp-small: 37.5em;    // 600px;
+$bp-exsmall : 31.25em; //500px
 .banner1{
     background-image: linear-gradient(rgba(rgb(16, 59, 185),0.99),rgba(rgb(16, 59, 185),0.99)),url(../../../assets/initialvector.jpg);
     height: 100%;
@@ -13,7 +14,19 @@ $bp-small: 37.5em;    // 600px;
     grid-template-columns: [lspace-start] 1fr [lspace-end left-arrow-start] max-content [left-arrow-end text-start] minmax(25rem,min-content) [text-end gallery-start] max-content [galler-end right-arrow-start] max-content [right-arrow-end rspace-start] 1fr [rspace-end];
     
     @media only screen and (max-width: $bp-tablet) {
+        display: grid;
+        grid-template-rows: max-content;
         
+        &__leftarrow{
+            display: none;
+        }
+        &__rightarrow{
+            display: none;
+        }
+    }
+    @media only screen and (max-width : $bp-small){
+        display: flex;
+        flex-direction: column;
     }
     &__leftarrow{
         grid-row: 2 / span 1;
@@ -30,6 +43,28 @@ $bp-small: 37.5em;    // 600px;
         line-height: 2rem;
         color: #FFFFFF;
         padding: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: #FFFFFF;
+            padding: 2rem;
+            align-self: start;
+            width: 50%;
+            margin-top: 5rem;
+        }
+        @media only screen and (max-width: $bp-exsmall) {
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 2rem;
+            color: #FFFFFF;
+            padding: 2rem;
+            align-self: start;
+            width: 93%;
+            margin-top: 5rem;
+        }
+        
     }
     &__gallery{
         grid-row: 2 / span 1;
@@ -40,6 +75,10 @@ $bp-small: 37.5em;    // 600px;
         justify-content: center;    
         align-content: center;
         position: relative;
+
+        @media only screen and (max-width: $bp-small) {
+            align-self: center;
+        }
 
         &-fig{
             margin: 0;
@@ -103,6 +142,7 @@ $bp-small: 37.5em;    // 600px;
         align-self: center;
         padding: 1rem;
     }
+
     &__circle{
         width: 3.5rem;
         height: 3.5rem;
