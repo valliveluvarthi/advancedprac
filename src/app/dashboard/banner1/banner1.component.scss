@@ -1,0 +1,127 @@
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 56.25em; // 900px
+$bp-tablet : 43.75em; //700px
+$bp-small: 37.5em;    // 600px;
+.banner1{
+    background-image: linear-gradient(rgba(rgb(16, 59, 185),0.99),rgba(rgb(16, 59, 185),0.99)),url(../../../assets/initialvector.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: 6rem 6rem;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: [lspace-start] 1fr [lspace-end left-arrow-start] max-content [left-arrow-end text-start] minmax(25rem,min-content) [text-end gallery-start] max-content [galler-end right-arrow-start] max-content [right-arrow-end rspace-start] 1fr [rspace-end];
+    
+    @media only screen and (max-width: $bp-tablet) {
+        
+    }
+    &__leftarrow{
+        grid-row: 2 / span 1;
+        grid-column: left-arrow-start / left-arrow-end;
+        align-self: center;
+        padding: 1rem;
+    }
+    &__text{
+        grid-row: 2 / span 1;
+        grid-column: text-start / text-end;
+        align-self: center;
+        font-weight: 700; 
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #FFFFFF;
+        padding: 2rem;
+    }
+    &__gallery{
+        grid-row: 2 / span 1;
+        grid-column: 4 / span 1;
+        display: grid;
+        grid-template-rows: repeat(5, 5rem);
+        grid-template-columns: repeat(6, 5rem);
+        justify-content: center;    
+        align-content: center;
+        position: relative;
+
+        &-fig{
+            margin: 0;
+            display: inline-block;
+        }
+        &-img1{
+            grid-row: 4 / span 1;
+            grid-column: 1 / span 2;
+            &-logo1{
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+        &-img2{
+            grid-row: 6/span 1;
+        grid-column: 6/span 1;
+        margin-left: -14rem;
+        margin-top: -6rem;
+            &-logo2{
+                width: 22rem;
+                height: 10rem;
+            }
+        }
+        &-img3{
+            grid-row: 1/span 1;
+            grid-column: 4 / span 1;
+            &-logo3{
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+        &-img4{
+            grid-row: 2/span 1;
+            grid-column: 5/span 1;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 0rem;
+            z-index: 5; 
+        }
+        &-img5{
+            grid-row: 2 / span 3;
+            grid-column: 2 / span 2;
+            height: 18rem;
+            width: 18rem;
+        }
+        &-img6{
+            grid-row: 4/span 1;
+            grid-column: 6/span 2;
+            width: 11rem;
+            font-size: 1rem;
+            color: #fff;
+            margin-left: -1rem;
+            margin-top: 1rem;
+        }
+    }
+    &__rightarrow{
+        grid-row: 2 / span 1;
+        grid-column: right-arrow-start / right-arrow-end;
+        align-self: center;
+        padding: 1rem;
+    }
+    &__circle{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: #B5B5B5;
+        &-right{
+            background: #F3F9FF;
+        }
+    }
+    &__icon{
+        font-size: 2rem;
+        margin-top: 0.8rem;
+        margin-left: 1.1rem;
+        color: #8c8686;
+    }
+    &__icon2{
+        font-size: 2rem;
+        margin-top: 0.8rem;
+        margin-left: 1.3rem;
+        color: #8c8686;
+    }
+}
