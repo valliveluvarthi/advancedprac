@@ -24,6 +24,8 @@ import { Banner4Component } from './banner4/banner4.component';
 import { Banner5Component } from './banner5/banner5.component';
 import { Banner6Component } from './banner6/banner6.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 @NgModule({
   declarations: [HomeComponent, Banner1Component, HeaderComponent, Banner2Component, Banner3Component, Banner4Component, Banner5Component, Banner6Component, FooterComponent,],
   imports: [
@@ -43,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
     MatDialogModule,
     MatSnackBarModule,
     RouterModule,
+    MatExpansionModule,
   ],
   entryComponents: [
     HomeComponent
